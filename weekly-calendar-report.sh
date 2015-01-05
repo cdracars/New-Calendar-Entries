@@ -12,7 +12,7 @@ mysql $db -t -e "SELECT node.title, node.nid FROM node node WHERE (DATE_FORMAT(A
 
 # filter out any tables we don't really care about
 cat $tfile1 | grep [0-9] | sed -e 's/^|.//' \
-                  -e 's/|.\([0-9]\)/http:\/\/65\.64\.85\.221\/node\/\1/' \
+                  -e 's/|.\([0-9]\)/http:\/\/usao\.edu\/node\/\1/' \
                                     -e 's/\([0-9]\).|/\1\/edit/' > $tfile2
 
 
