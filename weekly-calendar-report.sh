@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Setup temp files for use
+IFS='%'
 tfile1=$(mktemp /tmp/newCalXXXXXX)
 tfile2=$(mktemp /tmp/newCalXXXXXX)
 tfile3=$(mktemp /tmp/newCalXXXXXX)
@@ -43,3 +44,4 @@ fi
 rm -f ${tfile1}
 rm -f ${tfile2}
 rm -f ${tfile3}
+unset IFS
